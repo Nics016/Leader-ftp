@@ -22,15 +22,15 @@
 .header-pictures-pic2{
 	display: block;
 	float:left;
-	margin-left: 340px;
+	width: 420px;
+	margin-left: 280px;
 }
 
 .header-pictures-pic3{
 	display: block;
-	float:left;
+	float:right;
 	width: 100px;
 	padding-top: 5px;
-	margin-left: 300px;
 }
 
 .header-menu{
@@ -105,7 +105,9 @@ ul#top-menu li a{
 }
 
 #top-menu li ul li a{
-	padding: 10px 0;
+	padding-top: 10px;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .header-hr{

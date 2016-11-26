@@ -18,4 +18,18 @@ jQuery(document).ready(function($){
     	$("#modal").fadeOut(500);
     });
 
+    //показываем окошко на слайдере при наведении мышки
+    $(".bx-wrapper").bind("mouseenter", function(){
+    		$(".slider-image-textblock").fadeIn(500);
+    });
+
+    //скрываем окошко на слайдере при уходе мышки
+    $(".bx-wrapper").bind("mouseleave", function(){
+    		$(".slider-image-textblock").fadeOut(500);
+    });
+
 });
+
+function spanClick(id){
+	document.getElementByID(id).click();
+}

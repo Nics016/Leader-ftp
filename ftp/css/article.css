@@ -14,7 +14,7 @@
 .article-info-title{
 	display: block;
 	font-family: SegoeUIBold;
-	font-size: 24px;
+	font-size: 25px;
 	color: #000;
 	padding-bottom: 10px;
 	border-bottom: 2px solid black;
@@ -50,10 +50,24 @@
 	float: left;
 }
 
+.article-right-photos-element-pic:hover{
+	filter: grayscale(0%);
+	-webkit-filter: grayscale(0%);
+	-moz-filter: grayscale(0%);
+	-o-filter: grayscale(0%);
+	-ms-filter: grayscale(0%);
+}
+
 .article-right-photos-element-pic{
 	display: block;
 	width: 180px;
 	height: 110px;
+	filter: grayscale(70%);
+	-webkit-filter: grayscale(70%);
+	-moz-filter: grayscale(70%);
+	-o-filter: grayscale(70%);
+	-ms-filter: grayscale(70%);
+	transition: all .1s ease-in;
 }
 
 .article-date-container{

@@ -113,7 +113,7 @@ body{
     width: 500px;
     float: left;
     font-family: SegoeUIBold;
-    font-size: 18px;
+    font-size: 16px;
     color: #4b4e50;
 }
 
@@ -125,7 +125,7 @@ body{
 
 .modal-director-text {
     color: #333;
-    font-size: 16px;
+    font-size: 14px;
     font-family: SegoeUILight;
 }
 
@@ -165,7 +165,7 @@ body{
 }
 
 .modal-contacts-text {
-    font-size: 17px;
+    font-size: 13px;
     color: #333333;
     display: inline-block;
     font-family: SegoeUIRegular;
