@@ -99,13 +99,15 @@ if ( have_posts() ):
 
 			// выводим посты категории Архив
 			$archive_posts = new WP_Query('cat='.$catt->term_id."&posts_per_page=18");
+			$i = 0;
 			while ( $archive_posts->have_posts() ):
 				$archive_posts->the_post();
 		 ?>
-			<a class="categories-element" href="<?php the_permalink(); ?>">
+			<a class="categories-element" href="<?php the_permalink(); ?>" data-event="showArticleModal" data-modal="<?= $i ?>">
 				<img src="<?php the_post_thumbnail_url(); ?>" class="categories-element-pic">
 			</a>
 		<?php 
+			$i++;
 			endwhile;
 			wp_reset_postdata();
 		 ?>
@@ -115,6 +117,7 @@ if ( have_posts() ):
 </main>
 <!-- END OF MAIN -->
 
+<!-- MODAL CURATORS -->
 <div id="modal">
 	
 	<?php
@@ -189,7 +192,56 @@ if ( have_posts() ):
 	?>
 
 </div>
+<!-- END OF MODAL CURATORS -->
 
+<!-- ARTICLES MODAL -->
+<div id="articles-modal">
+	
+	<?php 
+		$archive_posts = new WP_Query('cat='.$catt->term_id."&posts_per_page=18");
+		$i = 0;
+		while ( $archive_posts->have_posts() ):
+			$archive_posts->the_post();
+
+			$content = get_the_content();
+			$content = strip_shortcodes($content);
+	        $content = str_replace(']]>', ']]&gt;', $content);
+	        $content = strip_tags($content);
+	        $excerpt_length = 25;
+	        $words = explode(' ', $content, $excerpt_length + 1);
+	        if(count($words) > $excerpt_length){
+	            array_pop($words);
+	        }
+	        $content = implode(' ', $words);
+	        $content .="..."
+	?>
+		
+
+	<div class="articles-modal-container" data-modal-id="<?= $i ?>">
+		<div class="articles-modal-content clearfix">
+			<span class="articles-modal-close"></span>	
+			<img src="<?php the_post_thumbnail_url(); ?>" class="articles-modal-content-pic">
+			<div class="articles-modal-content-info">
+				<span class="articles-modal-content-info-title">
+					<?= the_title(); ?>
+				</span>
+				<div class="articles-modal-content-info-text-container">
+					<span class="articles-modal-content-info-text">
+						<?= $content ?>
+					</span> 
+				</div>
+			</div>
+		</div>
+		<a href="<?php the_permalink(); ?>" class="articles-modal-content-info-readnext"></a>
+	</div>
+	<?php 
+		$i++;
+		endwhile;
+		wp_reset_postdata();
+	 ?>
+
+</div>
+<!-- END OF ARTICLES MODAL -->
 <?php 
 get_footer(); 
 ?>
