@@ -38,7 +38,7 @@ get_header();
 		// Readmore
    		$('#article-id').readmore({
 			  speed: 200,
-			  collapsedHeight: 500,
+			  collapsedHeight: 667,
 			  moreLink: '<a href="#" class="article-info-text-readmore"></a>',
 			  lessLink: '<a href="#" class="article-info-text-readless"></a>'			  
 			});
@@ -88,7 +88,7 @@ get_header();
 				</div>
 			</div>
 		</div>
-		<div class="article-date-container">
+		<div class="container clearfix">
 			<span class="article-date">
 				<?php the_date('d-m-Y'); ?>
 			</span>

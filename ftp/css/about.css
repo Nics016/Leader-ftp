@@ -12,7 +12,7 @@
 .project-title{
 	display: block;
 	text-align: center;
-	color: #818D97;	
+	color: #636363;	
 	font-family: RobotoThin;
 	font-size: 25px;
 	color: #000;
@@ -51,7 +51,7 @@
 	float: left;
 	width: 980px;
 	margin-left: 20px;
-	color: #818D97;
+	color: #636363;
 	font-family: SegoeUIRegular;
 	font-size: 14px; 
 	text-align: justify;
@@ -60,7 +60,7 @@
 .project-info-subtext{
 	display: block;
   margin-top: 30px;
-  color: #818D97;
+  color: #636363;
   font-family: SegoeUIRegular;
   font-size: 14px;
 }
@@ -131,7 +131,7 @@
 
 .video-info-title{ 
 	display: block;
-	color: #818D97;	
+	color: #636363;	
 	font-family: SegoeUIBold;
 	font-size: 24px;
 	padding-bottom: 5px;
@@ -141,10 +141,25 @@
 .video-info-text{
 	display: block;
 	margin-top: 20px;
-	color: #818D97;
+	color: #636363;
 	font-family: SegoeUILight;
 	font-size: 21px;
 	text-align: justify;
+}
+
+.video-info-readnext{
+	display: block;
+	margin-top: 50px;
+	margin-left: 340px;
+	height: 32px;
+	width: 32px;
+	background-color: #fff;
+	cursor: pointer;
+	text-decoration: none;
+	z-index: 101;
+	background-image: url("../img/header_arrow_readmore.png");
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 
 .children{
@@ -225,7 +240,7 @@
 	width: 350px;
 	font-size: 24px;
 	font-family: SegoeUIBold;
-	color: #818D97;
+	color: #636363;
 }
 
 .articles-modal-content-info-text-container{
@@ -242,7 +257,7 @@
 	padding-bottom: 15px;
 	font-size: 21px;
 	font-family: SegoeUILight;
-	color: #818D97;
+	color: #636363;
 	text-align: justify;
 }
 
@@ -252,6 +267,7 @@
 	margin-left: 750px;
 	height: 32px;
 	width: 32px;
+	background-color: #fff;
 	cursor: pointer;
 	text-decoration: none;
 	z-index: 101;

@@ -69,6 +69,7 @@ if ( have_posts() ):
 	$video_link = get_field("video_link");
 	$video_title = get_field("video_title");
 	$video_description = get_field("video_description");
+	$video_description_link = get_field("video_description_link");
 	?>
 	<div class="video clearfix">
 		<div class="container clearfix">
@@ -80,6 +81,7 @@ if ( have_posts() ):
 				<span class="video-info-text">
 					<?= $video_description ?>
 				</span>
+				<a href="<?= $video_description_link ?>" class="video-info-readnext"></a>
 			</div>
 		</div>
 	</div>
